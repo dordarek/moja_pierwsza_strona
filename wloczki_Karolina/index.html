@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Diagnostyka Laboratoryjna</h1>
+  <nav class="header__nav">
+    <ul class="header__ul">
+      <a href="index.html" >Strona Główna</a>
+      <a href="hematologia.html" >Hematologia</a>
+      <a href="analitykaogolna.html" >Analityka ogólna</a>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdown">Biochemia</a>
+      <div class="dropdown-content">
+        <a href="#">Immunochemia</a>
+        <a href="rkz.html">Równowaga kwasowo-zasadowa</a>
+        <a href="#">Ciekawe przypadki</a>
+      </div>
+      </li>
+      <a href="kontakt.html" >Kontakt</a>
+    </ul>
+  </nav>
+  </header>
+  <section class="hero">
+    <h2 class="hero__h2">Cześć</h2>
+    <figure>
+      <img src="pictures/neutrofilia.jpg" alt="Neutrofilia" width="1000" height="667">
+      <figcaption class="offscreen">Neutrofilia w rozmazie</figcaption>
+    </figure>
+  </section>
+      <main class="main">
+      <section>
+      <article class="main__article">
+        <h2>Diagnostyka Laboratoryjna</h2>
+        <p >Diagnostyka laboratoryjna to dziedzina medycyny, która zajmuje się badaniem materiału pobranego od pacjenta, takiego jak <span class="highlight">krew, wymazy czy wydzieliny.</span> Wyniki badań laboratoryjnych pomagają poznać ogólny stan zdrowia pacjenta i – w razie potrzeby – zaplanować leczenie.   
+        <h2>Kim jest Diagnosta laboratoryjny?</h2>
+        <p>Diagnosta laboratoryjny to pracownik ochrony zdrowia, który zajmuje się badaniem materiału biologicznego pobranego od pacjentów w celach diagnostycznych, leczniczych i sanitarno-epidemiologicznych.</p>
+        <div id="second" style="display: none;">
+        <h3>Jak zostać Diagnostą Laboratoryjnym?</h3>
+        <p>Aby pracować jako diagnosta laboratoryjny, trzeba spełnić określone wymagania, takie jak:
+<ul>
+        <li>Ukończenie jednolitych studiów magisterskich na kierunku analityka medyczna.</li>
+        <li>Posiadanie tytułu zawodowego lekarza po ukończeniu specjalizacji.</li>
+        <li>Ukończenie studiów na kierunkach takich jak biologia, farmacja, chemia, biotechnologia lub weterynaria.</li>
+        <li>Posiadanie odpowiednich kwalifikacji do wykonywania zawodu diagnosty laboratoryjnego, uzyskanych w państwie członkowskim Unii Europejskiej.</li>
+        <li>Posiadanie stanu zdrowia umożliwiającego wykonywanie tego zawodu oraz pełnej zdolności do czynności prawnych.</li>
+            Każdy diagnosta laboratoryjny musi również uzyskać wpis na Listę Diagnostów Laboratoryjnych (<abbr title="Prawo Wykonywania Zawodu Diagnosty Laboratoryjnego">PWZDL</abbr>), który potwierdza prawo wykonywania tego zawodu</p>
+        </ul>        
+            <br> &nbsp;&nbsp; Krajowa Izba Diagnostów Laboratoryjnych</p>
+        <address>
+            <abbr title="Krajowa Izba Diagnostów Laboratoryjnych">
+                <a href="https://kidl.org.pl/">KIDL</a>
+            </abbr><br>
+            ul. Konopacka 4 <br>
+            03-428 Warszawa <br>
+        </address>
+      </div>
+        <button class="button">Czytaj więcej</button>
+      </article>
+    </section>
+      <hr>
+    <section id="badania">  
+      <article>
+        <h2>Rodzaje badań</h2>
+        <p class="gray">W ramach <em>diagnostyki laboratoryjnej</em> przeprowadza się różnego rodzaju badania, w tym:
+            <ol>
+           <li>Biochemia kliniczna: Analizuje skład chemiczny krwi, poziomy enzymów, hormonów, elektrolitów i białek.</li>
+           <li>Immunologia medyczna: Bada układ odpornościowy, oznacza przeciwciała, antygeny i inne markery immunologiczne.</li>
+           <li>Genetyka medyczna: Diagnozuje choroby genetyczne na podstawie analizy materiału genetycznego.</li>
+           <li>Cytomorfologia medyczna: Ocenia komórki i tkanki pod mikroskopem, np. badania krwi czy szpiku kostnego.</li>
+           <li>Badania równowagi kwasowo-zasadowej i wodno-elektrolitowej: Analizuje poziomy elektrolitów, pH i innych parametrów.</li>
+           <li>Badania mikrobiologiczne: Wykrywa infekcje bakteryjne, wirusowe czy grzybicze.</li>
+           <li>Badania ogólne: Obejmują badania moczu, kału, płynu mózgowo-rdzeniowego i innych próbek.</li>
+        </ol>
+      </p>
+      </article>
+    </section>
+  </main>
+    <hr>
+      <footer class="footer">
+        <p>
+          <span class="nowrap">Copyright &copy;</span>
+          <span class="nowrap"><a href="about.html">Karolina Czudec</a></span>
+        </p>
+      </footer>
+          <!-- Skrypt JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelector('.button').addEventListener('click', function() {
+              const content = document.getElementById('second');
+              if (content.style.display === 'none' || content.style.display === '') {
+                  content.style.display = 'block';
+                  this.textContent = 'Zwiń';
+              } else {
+                  content.style.display = 'none';
+                  this.textContent = 'Czytaj więcej';
+              }
+          });
+      });
+      
+  </script>
+</body>
+</html>

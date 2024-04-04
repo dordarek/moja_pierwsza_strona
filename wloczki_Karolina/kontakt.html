@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__h1">Diagnostyka Laboratoryjna</h1>
+  <nav class="header__nav">
+    <ul class="header__ul">
+      <a href="index.html" >Strona Główna</a>
+      <a href="hematologia.html" >Hematologia</a>
+      <a href="analitykaogolna.html" >Analityka ogólna</a>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropdown">Biochemia</a>
+      <div class="dropdown-content">
+        <a href="#">Immunochemia</a>
+        <a href="rkz.html">Równowaga kwasowo-zasadowa</a>
+        <a href="#">Ciekawe przypadki</a>
+      </div>
+      </li>
+      <a href="kontakt.html" >Kontakt</a>
+    </ul>
+  </nav>
+  </header>
+  <section class="hero">
+    <h2 class="hero__h2">Napisz do mnie!</h2>
+    <figure>
+      <img src="pictures/neutrofilia.jpg" alt="Neutrofilia" width="1000" height="667">
+      <figcaption class="offscreen">Neutrofilia w rozmazie</figcaption>
+    </figure>
+  </section>
+<main class="main">
+<article id="contact" class="main__article contact">
+  <h2 class="contact__h2">Skontaktuj się ze mną!</h2>
+  <p>Napisz do mnie jeżeli masz jakiekolwiek pytania :)</p>
+  <form action="https://httpbin.org/get" method="get" class="contact__from">
+    <fieldset class="contact__fieldset">
+      <legend class="offscreen">Twoje dane</legend>
+    <p class="contact_p">
+    <label class="contact_label" for="firstName">Imię</label>
+    <input class="contact_input" type="text" name="firstName" id="firstName" placeholder="Twoje imię" autocomplete="on" required autofocus>
+  </p>
+  <p class="contact_p">
+    <label class="contact_label" for="lastName">Nazwisko</label>
+    <input class="contact_input" type="text" name="lastName" id="lastName" placeholder="Twoje nazwisko" autocomplete="on" required>
+  </p>
+  <p class="contact_p">
+    <label class="contact_label" for="email">Email</label>
+    <input class="contact_input" type="email" name="email" id="email" placeholder="Twój adres email" autocomplete="on" required>
+  </p>
+</fieldset>
+<br>
+<fieldset class="contact__fieldset">
+  <legend class="offscreen">Twoje Pytanie</legend>
+  <label  class="contact_label" for="message">Pytanie</label>
+<br>
+<textarea class="contact_textarea" name="message" id="message" cols="30" rows="10" placeholder="Tutaj napisz swoją wiadomość"></textarea>
+</fieldset>
+<br>
+<button class="contact_button" type="submit">Wyślij</button>
+<button class="contact_button" type="reset">Anuluj</button>
+  </form>
+</article>
+</main>    
+      <hr>
+      <footer class="footer">
+        <p>
+          <span class="nowrap">Copyright &copy;</span>
+          <span class="nowrap"><a href="about.html">Karolina Czudec</a></span>
+        </p>
+      </footer>
+</body>
+</html>

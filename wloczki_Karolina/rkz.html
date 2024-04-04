@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__h1">Diagnostyka Laboratoryjna</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <a href="index.html" >Strona Główna</a>
+          <a href="hematologia.html" >Hematologia</a>
+          <a href="analitykaogolna.html" >Analityka ogólna</a>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown">Biochemia</a>
+          <div class="dropdown-content">
+            <a href="#">Immunochemia</a>
+            <a href="rkz.html">Równowaga kwasowo-zasadowa</a>
+            <a href="#">Ciekawe przypadki</a>
+          </div>
+          </li>
+          <a href="kontakt.html" >Kontakt</a>
+        </ul>
+      </nav>
+      </header>
+      <section class="hero">
+
+        <h2 class="hero__h2">Tutaj dowiesz się co to jest RKZ!</h2>
+        <figure>
+          <img src="pictures/neutrofilia.jpg" alt="Neutrofilia" width="1000" height="667">
+          <figcaption class="offscreen">Neutrofilia w rozmazie</figcaption>
+        </figure>
+      </section>
+        <main class="main">
+            <section>
+<article class="main__article rkz">
+                <h2 class="rkz__h2">Równowaga kwasowo-zasadowa</h2>
+                <p>Równowaga kwasowo-zasadowa w organizmie jest kluczowa dla prawidłowego funkcjonowania wszystkich procesów fizjologicznych. 
+                  Jej zachwianie, szczególnie zmiany dotyczące pH krwi, wiążą się z poważnymi konsekwencjami, najczęściej pobytem w szpitalu. 
+                  Trudności w interpretacji zaburzeń kwasowo-zasadowych wynikają z konieczności niezwłocznego podjęcia decyzji terapeutycznych zapadających głównie na oddziałach intensywnej opieki medycznej.</p>
+                <br>
+                <table class="rkz__container">
+                  <thead>
+                    <tr>
+                        <th class="rkz__header" scope="col">Rodzaj zaburzenia</th>
+                        <th class="rkz__header" scope="col">pH</th>
+                        <th class="rkz__header" scope="col">HCO3-</th>
+                        <th class="rkz__header" scope="col">pCO2</th>
+                        <th class="rkz__header" scope="col">Kompensacja organizmu</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr> 
+                        <td class="rkz__item" scope="row" >Kwasica metaboliczna</td>
+                        <td class="rkz__item">Poniżej 7,35</td>
+                        <td class="rkz__item">Niski</td>
+                        <td class="rkz__item">Niski</td>
+                        <td class="rkz__item">Hiperwentylacja w celu zwiększenia eliminacji CO2</td>
+                    </tr>
+                    <tr>
+                        <td class="rkz__item" scope="row">Zasadowica metaboliczna</td>
+                        <td class="rkz__item">Powyżej 7,45</td>
+                        <td class="rkz__item">Wysoki</td>
+                        <td class="rkz__item">Wysoki</td>
+                        <td class="rkz__item">Hipowentylacja w celu zmniejszenia eliminacji CO2</td>
+                    </tr>
+                    <tr>
+                        <td class="rkz__item" scope="row">Kwasica oddechowa</td>
+                        <td class="rkz__item">Poniżej 7,35</td>
+                        <td class="rkz__item">Wysoki</td>
+                        <td class="rkz__item">Wysoki</td>
+                        <td class="rkz__item">Nerki wzmagają zatrzymanie HCO3- i wydalanie kwasu</td>
+                    </tr>
+                    <tr>
+                        <td class="rkz__item" scope="row">Zasadowica oddechowa</td>
+                        <td class="rkz__item">Powyżej 7,45</td>
+                        <td class="rkz__item">Niski</td>
+                        <td class="rkz__item">Niski</td>
+                        <td class="rkz__item">Nerki zmniejszają zatrzymanie HCO3- i wydalanie kwasu</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+<section>
+  <aside>
+    <details>
+        <summary class="rkz__aside">Kwasica oddechowa</summary>
+        <p>Zmniejszone wydalanie CO2</p>
+        <ul>
+          <li>Obniżona częstotliwość oddechów spowodowana lekami lub zaburzeniami w obrębie ośrodkowego układu nerwowego</li>
+          <li>Zaburzenie oddychania i mechaniki oddychania spowodowane na przykład urazem lub nieprawidłową obecnością powietrza w jamie opłucnej (odma opłucnowa).</li>
+        </ul>
+    </details>
+</aside>
+  <aside>
+    <details>
+        <summary class="rkz__aside">Zasadowica oddechowa</summary>
+        <p>Wzmożone wydalanie CO2</p>
+        <ul>
+          <li>Hiperwentylacja spowodowana atakiem paniki, bólem lub urazem.</li>
+          <li>Leki (aspiryna).</li>
+        </ul>
+    </details>
+</aside>
+  <aside>
+    <details>
+        <summary class="rkz__aside">Kwasica metaboliczna</summary>
+        <p>Obniżony poziom HCO3- z powodu utraty lub z powodu wzrostu poziomu kwasu</p>
+        <ul>
+          <li>Alkoholowa kwasica ketonowa.</li>
+          <li>Cukrzycowa kwasica ketonowa.</li>
+        </ul>
+    </details>
+</aside>
+  <aside>
+    <details>
+        <summary class="rkz__aside">Zasadowica metaboliczna</summary>
+        <p>Podwyższony poziom HCO3- z powodu utraty kwasów lub nadmiaru dwuwęglanów</p>
+        <ul>
+          <li>Środki moczopędne.</li>
+          <li>Długotrwałe wymioty.</li>
+        </ul>
+    </details>
+</aside>
+</section>
+</main>
+      <hr>
+      <footer class="footer">
+        <p>
+          <span class="nowrap">Copyright &copy;</span>
+          <span class="nowrap"><a href="about.html">Karolina Czudec</a></span>
+        </p>
+      </footer>
+</body>
+</html>

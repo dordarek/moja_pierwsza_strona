@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme:wght@100..900&family=Joan&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@1,700&family=Tac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@1,700&family=Tac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comme:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@1,700&family=Tac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@1,700&display=swap');
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea {
+    font: inherit;
+}
+
+.tac-one-regular {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+:root {
+    /* FONTS */
+    --FF: "Comme";
+    --FF-HEADINGS: "Joan", sans-serif;
+    --FS: clamp (1rem, 2.2vh, 1.5rem);
+
+    /* COLOTS */
+    --BGCOLOR : #FFB6C1;
+    --BGCOLOR-FADE : #FFFFFF;
+    --BIGIMAGE: linear-gradient(to bottom, var(--BGCOLOR),var(--BGCOLOR-FADE));
+    --BODY_BGCOLOR: #FFFFFF;
+    --FONT_COLOR: #808080;
+    --BORDER-COLOR:   #808080;
+    --HIGHLIGHT-COLOR:  #006994;
+    --LINK-COLOR: #808080;
+    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+    --LINK-ACTIVE:  #006994;
+    --HEADER-BGCOLOR: #FFFFFF;
+    --HEADER-COLOR:  #006994;
+    --NAV-BGCOLOR: #FFF;
+    --HERO-BGCOLOR:  #006994;
+    --HERO-COLOR: #fff;
+
+    
+    
+    /* BORDERS */
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+
+    /* STANDARD PADDING*/
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 2.5%;
+
+    /* STANDARD MARGIN*/
+    --MARGIN: clamp (1em, 2.5vh, 1.5em) 0;
+    
+}
+
+/* ULITILY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+/* GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BIGIMAGE);
+}
+
+body{
+    background-color: var(--BODY_BGCOLOR);
+    color: var(--FONT_COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+
+h1,h2,h3 {
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+}
+
+h2,h3 {
+    margin-top: 1em;
+margin-bottom: 0.25em;
+color: var(--HIGHLIGHT-COLOR);
+}
+
+p {
+    line-height: 1.5;
+    }
+
+a:any-link {
+    color: var(--LINK-COLOR);
+}    
+
+a:hover, a:focus-visible{
+    color: var(--LINK-HOVER);
+}
+
+a:active{
+    color: var(--LINK-ACTIVE);
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    }
+
+.header__h1 {
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.header__nav {
+    background-color: var(--NAV-BGCOLOR);
+    border-bottom: var(--BORDERS);
+    font-weight: bold;
+    box-shadow: 0 6px 5px -5px var(--BORDER-COLOR);
+}
+
+.header__ul {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+/* HERO*/
+
+.hero {
+    position: relative;
+}
+
+.hero__h2 {
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR);
+    padding: 0.25em 0.5em;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: showWelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showWelcome {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scale(0);
+    }
+    80% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scale(1.2);
+    }
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scale(1);
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    text-align: center;
+}
+
+/* MAIN */
+
+.main {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+
+.main__article {
+    scroll-margin-top: 6.5rem;
+    max-width: var(--MARGIN);
+}
+
+.main__article:first-child {
+    margin-top: 1em;
+}
+
+.main__article:last-child {
+    min-height: calc(100vh - 20rem);
+}
+
+/* KONTAKT */
+
+.contact__h2 {
+    margin: 0;
+}
+
+.contact__fieldset {
+    border: none;
+}
+
+.contact_p {
+    margin: 1em 0;
+}
+
+.contact_label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact_input, .contact_textarea {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 100%;
+}
+
+.contact_button {
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: var(--HIGHLIGHT-COLOR);
+    color: var(--HEADER-BGCOLOR);
+}
+
+/* RKZ */
+
+thead, tbody, tfoot, tr {
+    display: contents;
+}
+
+.rkz__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "hd hd hd hd hd"
+    "cr1 cr1s cr1a cr1p cr1c"
+    "cr2 cr2s cr2a cr2p cr2c"
+    "cr3 cr3s cr3a cr3p cr3c"
+    "cr4 cr4s cr4a cr4p cr4c";
+    gap: 0.1em;
+    margin-bottom: 1em;
+}
+
+.rkz__aside {
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+    color: var(--HIGHLIGHT-COLOR);
+    font-size: rem;
+}
+
+.rkz__cr {
+    grid-area: cr;
+}
+
+.rkz__sf {
+    grid-area: sf;
+}
+
+.rkz__cs {
+    grid-area: cs;
+}
+
+.rkz__cr, .rkz__sf, .rkz__cs, .rkz__header {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.rkz__header {
+
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    border-bottom: var(--BORDERS);
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.rkz__header, .rkz__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.rkz__item{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 1em;
+    border: medium ridge var(--BORDER-COLOR);
+}
+
+.container {
+    min-height: 400px;
+    display: grid;
+    grid-template-areas: "hd hd hd" "mn mn mn" "ft ft ft ";
+    row-gap: 1em;
+    column-gap: 1em;
+    
+}
+.box {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.box:first-child {
+    
+    background-color: #023020;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.box:nth-child(4) {
+    background-color: purple;
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+}
+.box:nth-child(9) {
+    background-color: blueviolet;
+    grid-column: 1 / 5;
+}
+
+/* MORFOLOGIA */
+
+.grid-container__morf {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .item__morf {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+
+  }
+
+  .main.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolumny o równej szerokości */
+    grid-gap: 20px; /* odstęp między elementami */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 kolumn o równej szerokości */
+    grid-gap: 20px; /* odstęp między elementami */
+  }
+  
+  .grid-item {
+    grid-column: span 3; /* każdy element zajmuje 3 kolumny */
+  }
+  
+  /* Stylizacja dla większych elementów, jeśli są potrzebne */
+  .grid-item.large {
+    grid-column: span 6;
+  }
+  
+  /* Stylizacja dla mniejszych elementów, jeśli są potrzebne */
+  .grid-item.small {
+    grid-column: span 2;
+  }
+
+  /* Styl dla rozwijanego menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--HEADER-BGCOLOR);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Pokaż rozwijane menu po najechaniu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styl dla linków w rozwijanym menu */
+.dropdown-content a {
+    color: var(--HEADER-COLOR);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Zmień kolor linków po najechaniu */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
